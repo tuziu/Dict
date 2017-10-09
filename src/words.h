@@ -1,6 +1,8 @@
 #pragma once
 
 #include "def.h"
+#include <vector>
+
 
 class Trie;
 
@@ -12,11 +14,8 @@ struct CharState{
 class Words{
     CharState tab[16];
 
-    void build(Trie& trie, Positon pos);
-    void init();
+    Words();
 
-    std::vector<Positon> getPositons(Positon pos) const;
-    bool validate(Positon pos) const{
-        false;
-    }
+    void build(Trie& trie, Positon pos);
+
 };
